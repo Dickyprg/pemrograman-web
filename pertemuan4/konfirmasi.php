@@ -7,6 +7,7 @@ if (isset($_POST['daftar'])){
     $namabelakang = $_POST['namabelakang'];
     $email = $_POST['email'];
     
+    
     echo $username;
     echo"<br>";
     echo $email;
