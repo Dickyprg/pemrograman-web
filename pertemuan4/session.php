@@ -17,6 +17,7 @@
 	}
 		echo 'You are visitor number ' . $_SESSION['page_count'];
 
+		
 	session_destroy(); //destroy entire session 
 
 	unset($_SESSION['product']); //destroy product session item 

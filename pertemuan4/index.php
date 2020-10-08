@@ -14,6 +14,7 @@ if (isset($_POST['submit']) ){
     $_POST['password'] == $password){
 
     //cookie
+    
     //setcookie(key, nilai, expire)
     setcookie('nama_user', $_POST['nama'], time()+120);
     
