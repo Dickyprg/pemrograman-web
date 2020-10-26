@@ -9,12 +9,12 @@
     
 </head>
 <body>
-    <?php  
-    include_once "header.php"; 
-    include_once "koneksi.php";
+    <?php   
+    include_once "header.php";
+    include_once "koneksi.php"; 
     $status = 2;  
     if (isset($_POST['kodemk'])) {
-         
+        
         $kodemk = $_POST['kodemk'];
         $namamk = $_POST['namamk'];
         $kategori = $_POST['kategori'];
@@ -31,21 +31,27 @@
          else {
              $status = 0; //tidak sukses;
          }       
-    }         
-    
-    else if (isset($_GET['kodemk'])){
-        $kodemk = $_GET['kodemk'];
+    }        
+    else if (isset($_GET['kodemk'])) {
+        $_kodemk = $_GET['kodemk'];
         $strSQL = "SELECT * FROM matkul WHERE kodemk='".$_kodemk."'";
         $runStrSQL = mysqli_query($conn,$strSQL);
         $jmlRowData = mysqli_num_rows($runStrSQL);
-        if($jmlRowData > 0){
-            while($row = mysqli_fetch_assoc($runStrSQL)) {
+        if ($jmlRowData > 0) {
+            while ($row = mysqli_fetch_assoc($runStrSQL)) {
                 $_namamk = $row["namamk"];
                 $_kategori = $row["kategori"];
                 $_sks = $row["sks"];
             }
         }
-    }
+    }  
+    else {
+        $jngiseng = "disabled";
+        $_namamk = "";
+        $_kategori = "";
+        $_sks = "";
+        $_kodemk = "";
+    }  
     ?>
     <div class="container">
         <h2>Pendaftaran Mata Kuliah versi 2 (dg Modal)</h2>   
@@ -108,6 +114,7 @@
             </div>
         <?php 
             }
+        
         ?>
         <form id="myform" method="post" action="registrasimk2.php">
             <div class="form-group">
@@ -135,7 +142,7 @@
         </form>
         
     </div>
-    <?php
+    <?php 
     include_once "footer.php";
     ?>
     <!-- JS, Popper.js, and jQuery -->

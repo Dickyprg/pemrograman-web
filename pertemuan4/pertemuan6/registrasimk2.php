@@ -42,7 +42,6 @@
                         <h4 class="modal-title">Konfirmasi Pendaftaran</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
-
                     <!-- body -->
                     <div class="modal-body">
                         <div class="container">

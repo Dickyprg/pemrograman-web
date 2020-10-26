@@ -31,7 +31,7 @@
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="listmatkul.php">Mata Kuliah</a>
+        <a class="nav-link" href="listmatakuliah.php">Mata Kuliah</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="listkategori.php">Kategori Mata Kuliah</a>
