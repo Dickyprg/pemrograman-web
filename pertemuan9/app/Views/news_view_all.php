@@ -54,35 +54,35 @@
                     </div>
                 </nav>
                 <div class="container mt-5">
-                    <h2> List Users </h2>   
-                    <a href="<?= base_url('https://belajar-ci.test/admin/users/create')?>" class="btn btn-primary mb-2">Add User</a>
+                    <h2> List Berita </h2>   
+                    <a href="<?= base_url('https://belajar-ci.test/admin/news/create')?>" class="btn btn-primary mb-2">Add berita</a>
                     <div class="row mt-3">
                         <div class="col-sm-12">
                             <table class="table table-striped" id="tableuser">
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Nama</th>
-                                        <th>Email</th>
-                                        <th>No Contact</th>
-                                        <th>Password </th>
-                                        <th>Record data </th>
+                                        <th>Judul Berita</th>
+                                        <th>Author </th>
+                                        <th>Tanggal Posting</th>
+                                        <th>Foto</th>
+                                        <th>Isi Berita</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php if($users): ?>
-                                    <?php foreach ($users as $pengguna): ?>
+                                    <?php if($news): ?>
+                                    <?php foreach ($news as $pengguna): ?>
                                     <tr>
                                         <td><?= $pengguna['id']; ?></td>
-                                        <td><?= $pengguna['name']; ?></td>
-                                        <td><?= $pengguna['email']; ?></td>
-                                        <td><?= $pengguna['contact_no']; ?></td>
-                                        <td><?= $pengguna['password']; ?></td>
-                                        <td><?= $pengguna['created_at']; ?></td>
+                                        <td><?= $pengguna['judulberita']; ?></td>
+                                        <td><?= $pengguna['author']; ?></td>
+                                        <td><?= $pengguna['tglposting']; ?></td>
+                                        <td><?= $pengguna['foto']; ?></td>
+                                        <td><?= $pengguna['isiberita']; ?></td>
                                         <td>
-                                            <a href="<?= base_url('https://belajar-ci.test/admin/users/edit/'.$pengguna['id']);?>" class="btn btn-primary">Edit</a>
-                                            <a href="<?= base_url('https://belajar-ci.test/admin/users/delete/'.$pengguna['id']);?>" class="btn btn-warning">Delete</a>
+                                            <a href="<?= base_url('https://belajar-ci.test/admin/news/edit/'.$pengguna['id']);?>" class="btn btn-primary">Edit</a>
+                                            <a href="<?= base_url('https://belajar-ci.test/admin/news/delete/'.$pengguna['id']);?>" class="btn btn-warning">Delete</a>
                                         </td>
                                     </tr>
                                     <?php endforeach; ?>
